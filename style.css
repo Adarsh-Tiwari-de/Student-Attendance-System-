@@ -1,0 +1,105 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:sans-serif;background:#f5f5f5;padding:16px}
+h2{font-size:18px;margin-bottom:4px;color:#111}
+.sub{font-size:13px;color:#666;margin-bottom:16px}
+
+/* LOGIN BOX */
+#loginBox{max-width:360px;margin:40px auto;background:#fff;border-radius:12px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.loginTitle{font-size:20px;font-weight:600;text-align:center;margin-bottom:6px}
+.loginSub{font-size:13px;color:#888;text-align:center;margin-bottom:20px}
+.roleTabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+.roleBtn{padding:10px;border:2px solid #ddd;border-radius:8px;cursor:pointer;font-size:14px;font-weight:500;text-align:center;background:#fff;color:#555}
+.roleBtn.active{border-color:#3b82f6;background:#eff6ff;color:#1d4ed8}
+label{display:block;font-size:12px;color:#666;margin-bottom:4px;margin-top:12px}
+input[type=text],input[type=password]{width:100%;padding:9px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:14px}
+input:focus{outline:none;border-color:#3b82f6}
+.loginBtn{margin-top:16px;width:100%;padding:11px;background:#3b82f6;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer}
+.loginBtn:hover{background:#2563eb}
+.err{color:#dc2626;font-size:12px;margin-top:8px;text-align:center}
+.hint{font-size:11px;color:#aaa;text-align:center;margin-top:10px}
+
+/* PASSWORD TOGGLE WRAPPER */
+.pwdWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.pwdWrapper input {
+  width: 100%;
+  padding-right: 60px;
+}
+#togglePwd {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #3b82f6;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+#togglePwd:hover {
+  color: #2563eb;
+}
+
+/* MAIN DASHBOARD */
+#mainBox{display:none;max-width:800px;margin:0 auto}
+.topBar{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:12px;padding:14px 18px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.topLeft{display:flex;align-items:center;gap:10px}
+.topTitle{font-size:17px;font-weight:600;color:#111}
+.rolePill{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.teacherPill{background:#fef3c7;color:#92400e}
+.studentPill{background:#d1fae5;color:#065f46}
+.logoutBtn{padding:7px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:13px;cursor:pointer;background:#fff;color:#555}
+.logoutBtn:hover{background:#f5f5f5}
+
+/* TABS */
+.tabBar{display:flex;gap:0;margin-bottom:16px;background:#fff;border-radius:10px;padding:4px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.tabBtn{flex:1;padding:9px;border:none;background:transparent;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;color:#666}
+.tabBtn.active{background:#3b82f6;color:#fff}
+
+/* CARDS & ROWS */
+.card{background:#fff;border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.dateRow{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.dateLabel{font-size:15px;font-weight:600;color:#111}
+input[type=date]{padding:7px 10px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;cursor:pointer}
+.sRow, .mRow{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #f0f0f0}
+.sLeft{display:flex;align-items:center;gap:10px}
+.avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.sName{font-size:15px;font-weight:500;color:#111}
+.sRoll{font-size:12px;color:#888}
+.myRow {display:flex; justify-content:space-between; padding: 12px 0; border-bottom: 1px solid #f0f0f0;}
+.empty {font-size: 13px; color: #888; text-align: center; padding: 10px 0;}
+
+/* BUTTONS */
+.btnGroup{display:flex;gap:8px}
+.pBtn,.aBtn{padding:8px 18px;border-radius:24px;font-size:13px;font-weight:600;cursor:pointer;border:2.5px solid;transition:all 0.15s ease;user-select:none}
+.pBtn{border-color:#16a34a;background:#fff;color:#16a34a}
+.pBtn.on{background:#16a34a;color:#fff}
+.aBtn{border-color:#dc2626;background:#fff;color:#dc2626}
+.aBtn.on{background:#dc2626;color:#fff}
+.saveBtn{padding:9px 24px;background:#16a34a;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer}
+
+/* REPORTS & MANAGEMENT */
+.statGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.statBox{background:#f8fafc;border-radius:10px;padding:14px;text-align:center}
+.statN{font-size:28px;font-weight:700;color:#111}
+.tag{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;display:inline-block;text-align:center}
+.tagP{background:#dcfce7;color:#166534}
+.tagA{background:#fee2e2;color:#991b1b}
+.rRow, .rHead{display:grid;grid-template-columns:1fr 55px 55px 65px;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid #f0f0f0;font-size:14px}
+.delBtn{padding:5px 12px;border:1.5px solid #dc2626;border-radius:7px;font-size:12px;cursor:pointer;color:#dc2626;background:#fff}
+.addRow{display:flex;gap:8px;margin-top:14px}
+.addBtn{padding:8px 18px;background:#3b82f6;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer}
+
+/* NEW TICKETS UI */
+.disputeBtn {padding:4px 10px; border-radius:12px; font-size:11px; font-weight:600; cursor:pointer; background:#fff; border:1px solid #f59e0b; color:#d97706;}
+.disputeBtn:hover {background:#fef3c7;}
+.ticketRow {display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid #f0f0f0;}
+.approveBtn, .rejectBtn {padding:6px 12px; border:none; border-radius:6px; font-size:12px; font-weight:600; cursor:pointer; color:#fff;}
+.approveBtn {background:#16a34a;}
+.rejectBtn {background:#dc2626;}
+
+/* TOAST */
+#toast{position:fixed;bottom:24px;right:24px;background:#16a34a;color:#fff;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;opacity:0;transition:opacity .3s;pointer-events:none;z-index:9999}

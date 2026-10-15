@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginBox">
+  <div class="loginTitle">Attendance Portal</div>
+  
+  
+  <div class="roleTabs">
+    <div class="roleBtn active" id="rTeacher" onclick="setRole('teacher')">Teacher</div>
+    <div class="roleBtn" id="rStudent" onclick="setRole('student')">Student</div>
+  </div>
+  
+  <label>Username</label>
+  <input type="text" id="uname" placeholder="username">
+  
+  <label>Password</label>
+  <div class="pwdWrapper">
+    <input type="password" id="upass" placeholder="Enter password">
+    <button type="button" id="togglePwd" onclick="togglePassword()">Show</button>
+  </div>
+  
+  <div class="err" id="errMsg"></div>
+  <button id="loginBtn" class="loginBtn" onclick="doLogin()">Sign In</button>
+</div>
+
+<div id="mainBox">
+  <div class="topBar">
+    <div class="topLeft">
+      <div class="topTitle">Attendance System</div>
+      <span class="rolePill teacherPill" id="roleBadge">Teacher</span>
+    </div>
+    <button class="logoutBtn" onclick="doLogout()">Sign out</button>
+  </div>
+  
+  <div id="teacherArea">
+    <div class="tabBar">
+      <button class="tabBtn active" onclick="switchTab(0,this)">Mark</button>
+      <button class="tabBtn" onclick="switchTab(1,this)">Reports</button>
+      <button class="tabBtn" onclick="switchTab(2,this)">Students</button>
+      <button class="tabBtn" onclick="switchTab(3,this)">Tickets</button>
+    </div>
+    <div id="tabContent"></div>
+  </div>
+
+  <div id="studentArea" style="display:none">
+    <div id="studentContent"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

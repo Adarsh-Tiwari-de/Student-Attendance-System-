@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id          String       @id @default(uuid())
+  name        String
+  roll        String       @unique
+  attendances Attendance[]
+  tickets     Ticket[]
+}
+
+model Attendance {
+  id        Int     @id @default(autoincrement())
+  date      String
+  status    String
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id])
+
+  @@unique([date, studentId])
+}
+
+model Ticket {
+  id        String  @id @default(uuid())
+  date      String
+  reason    String
+  status    String  @default("Pending")
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id])
+}
