@@ -1,5 +1,10 @@
 node_modules
+
 # Keep environment variables out of version control
 .env
 
 /generated/prisma
+
+# Local databases contain real/test data - never commit them
+*.db
+*.db-journal
